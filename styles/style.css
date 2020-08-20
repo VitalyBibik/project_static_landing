@@ -1,0 +1,577 @@
+@keyframes triangle-anim{
+    from {
+            transform: rotate(0deg);
+    }
+    to {
+            transform: rotate(360deg);
+    } 
+}
+
+
+.page {
+    min-width: 1100px;
+    /* мы ещё не умеем делать мобильную версию сайта, */
+    /* поэтому выше установлена минимальная ширина страницы */
+    max-width: 1600px;
+    /* выше установили ограничение по максимальной ширине */
+    margin: 0 auto;
+    /* выше для экранов больше 1600px отцентрировали весь контент */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.header {
+    background-color: #F2F2F2;
+    background-size:cover;
+    height: 100vh;
+    display: flex;
+    min-height: 600px;
+    max-height: 756px;
+    position: relative;
+    /* выше установили ограничения для секции */
+    overflow: hidden; /* Родитель квадрата, для неперепоплнения род блока */
+}
+.logo_place_header {
+    position: absolute;
+    background-image: url("../images/logo.svg");
+    background-size: cover;
+    background-repeat: no-repeat;;
+    top:30px;
+    left:64px;
+    width: 183px;
+    height: 32px;
+}
+.header__title{
+    position: absolute;
+    display: flex;
+    left:64px;
+    justify-content: center;
+    align-self: center;
+    line-height: 96px;
+    font-size: 102px;
+    font-weight: bold;
+    width:730px;
+}
+.header__subtitle{
+    position: absolute;
+    left:64px;
+    top:610px;
+    width: 388px;
+    line-height: 25px;
+    font-size: 18px;
+}
+.header__link{
+    position: absolute;
+    width: 388px;
+    line-height: 25px;
+    font-size: 18px;
+    color:#2F80ED;
+    
+}
+.header__link:hover{
+    opacity: .5;
+    transition: 1s linear;
+}
+
+.header__main-illustration{
+    position: absolute;
+    width: 765px;
+    height: 608px;
+    bottom: 0;
+    right:0px;
+    background-size: cover;
+    background-repeat: no-repeat;  
+    z-index: 1;  
+   
+   
+}
+
+/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+.header__square-pic {
+    position: absolute;
+    height: 568px;
+    width: 568px;
+    top:64px;
+    right:0px;
+   background-color:#2F80ED;
+   z-index: 0   ; 
+   transform: rotate(-15deg);
+   animation:triangle-anim 20s linear infinite ;
+}
+
+/* и элемента с модификатором вида ключ-значение */
+/* Description */
+
+.table__cell_theme_dark {
+    width: 200px;
+    color: white;
+    margin-right: 0;
+    margin-top: 80px;
+}
+.description{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+.two-columns{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    min-width: 784px;
+    margin-top: 100px;
+    
+}   
+.two-columns__brief{    
+    display:flex;
+    flex-direction: row;
+    line-height: 1.2;
+    font-size: 18px;
+    color: #2F80ED;
+    min-width:175px;
+    position: relative;
+    top: 5px;
+    right: 70px;
+    font-weight:normal;
+
+}
+
+.two-columns__main-text{
+    display: flex;
+    flex-direction: column;
+
+}
+.two-columns__paragraph{
+    display: flex; 
+    line-height: 34px;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.two-columns__paragraph:nth-child(3){
+    margin:0;
+}
+
+.two-columns__span-accent{  
+    font-weight: bold;
+}
+
+/* technics */
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    grid-column-gap: 100px;
+    grid-row-gap: 60px;
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+}
+.cards__image{
+    height: 160px;
+    width: 160px;
+    border-radius: 90px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.cards__title{
+line-height: 1.15;
+font-size:24px;
+font-weight: bold;
+text-align: center;
+margin-bottom: 16px;
+margin-top: 43px;
+
+}
+.card__description{
+line-height: 23px;
+font-size:18px;
+text-align: center;
+
+}
+/* video */
+
+
+.video__iframes{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap:0 20px;
+    background-image: linear-gradient(to bottom,#FFFFFF 80%,#F2F2F2 20% );
+    }
+.video__iframe{
+    height: 316px;
+    width: 515px;
+   
+}
+.video__iframe:first-of-type { 
+    margin-left: auto;
+}
+.video__iframe:nth-of-type(2){
+    margin-right: auto;
+}
+
+
+
+/* digits */
+
+
+.section-title{
+    text-align: center;
+    line-height: 69px;
+    font-size: 69px;
+    font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 20px;
+   
+}
+
+
+.main-title{
+    line-height: 69px;
+    font-size: 69px;
+    font-weight: bold;
+}
+
+.section-subtitle{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    line-height: 34px;
+    font-size: 24px;
+    
+}
+.table{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: auto;
+    width: 1100px;
+   
+}
+.table__cell{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin-bottom: 60px;
+}
+.tble-special{
+    margin:0;
+}
+.table__heading{
+    line-height: 1.15;
+    font-size: 24px;
+    font-weight: bold;
+}
+.table__text{
+    line-height: 1.2;
+    font-size: 18px;
+    margin-top: 20px;
+}
+/* oaklu */
+
+.oakly{
+    display: flex;
+    justify-content: center;
+    background-color:#F2F2F2;
+    padding-top: 60px;
+    
+}
+
+
+/*feinman */
+.feinman{
+    position: relative;
+    background-color:#F2F2F2;
+    padding-bottom: 22%;
+    padding-top: 100px;
+    z-index: -1;
+    background-image: url(../images/feinman.png) ;
+    background-repeat: no-repeat;
+    background-position: 0px 260px; /* Можно ли так к примеру?*/ /* Да, хорошее решение */
+    background-size: 867px 637px;
+}
+
+.feinman__title{
+    font-weight: bold;
+    line-height: 1.15;
+    font-size: 120px;
+    width: 648px;
+    margin: 0 auto;
+    text-align: center;
+}
+.feinman__subtitle{
+    display: flex;
+    justify-content: center;
+    line-height: 51px;
+    font-size: 36px;
+    position: relative;
+    margin-top:70px;
+}
+.feinman__link{
+    position: absolute;
+    line-height: 51px;
+    font-size: 36px;
+    margin-top: -80px;
+    right: 48px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+/* khan section */
+
+.khan{
+    background-color: #F2F2F2;
+    padding-top: 105px;
+    margin-top:100px;
+}
+.khan__container{
+    width: 80%;
+    margin: auto;
+}
+.khan__author{
+    line-height: 42px;
+    font-size:30px;
+    margin: 0;
+}
+.khan__title{
+    line-height: 1.15;
+    font-size:60px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    margin-top: 0px;
+
+}
+.khan__quote{
+    line-height: 34px;
+    font-size:24px;
+    width: 790px;
+    margin-top: 0;
+    margin-bottom:36px;
+}
+.khan__quote-author{
+    line-height: 1.15;
+    font-size:24px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.khan__quote-author-subline{
+    line-height: 1.15;
+    font-size:24px;
+    margin-top: 0;
+    margin-bottom: 68px;
+}
+.khan__book-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap:0 20px;
+}
+.khan__book-pic{
+    width: 620px;
+    height: 608px;
+    object-fit: cover;
+    object-position:0 2% ;
+}
+
+.khan__buy-link{
+    line-height: 42px;
+    font-size:30px;
+    font-weight: normal;
+    color: #2F80ED;
+}
+.khan__buy-link:hover{
+    opacity: .5;
+    transition: 1s linear;
+}
+
+/*kaufman section*/
+
+.kaufman{
+    
+    padding-top:90px ;
+    background-color: #1F1F1F;
+     position: relative;
+      overflow: hidden;
+      z-index: 1;
+      
+}
+.section-title_theme_dark{
+    display:flex;
+    justify-content: center;
+    margin: auto;
+    color: white;
+    line-height: 69px;
+    font-size:60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width:60%;
+    
+}
+.section-subtitle_theme_dark{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    color: white;
+    line-height: 34px;
+    font-size: 24px;        
+    width: 60%;
+    
+}
+.table_theme_dark{ /*table*/
+    
+    display: flex;
+    flex-flow: row wrap;
+    width: 1100px;
+    margin: auto;
+    justify-content: space-between;
+    z-index: 1;
+
+}
+.table__cell_theme_dark{ /* 9cheiki голова */
+    line-height: 1.15;
+    font-size: 24px;
+    font-weight: 700;
+    width: 200px;
+    z-index: 1;
+}
+.table__heading_theme_dark{
+    margin-bottom: 20px;
+}
+.table__text_theme_dark{
+    font-weight: normal ;
+    line-height: 1.2;
+    font-size:18px;
+
+}
+.kaufman__triangle{
+    width: 877px;
+    height: 877px;
+    position: absolute;
+    right: -210px;
+    top: 78px;
+    animation:triangle-anim 20s linear infinite ;
+   
+}
+/* resources */
+.resources{
+    margin-top: 100px;
+    margin-bottom: 217px;
+}
+.resources__logo-zone{
+    width: 1100px;
+    margin:auto;
+    margin-top: 20px;
+}
+.resources__logo{
+    width: 270px;
+    height: 38px;
+}
+
+
+
+
+
+/* footer */
+.footer{
+    
+    padding-top: 60px;
+    padding-bottom: 40px;
+    color:white;
+    background-color: #1F1F1F;
+}
+.footer__columns{
+    display:flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+
+.footer__column {
+    min-height: 252px;
+}
+
+.footer__column_content_copyright{
+    display: flex;
+    flex-basis: 711px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer__author{
+    display: flex;
+    margin: 0px;
+}
+.footer__column_content_info{
+    flex-direction: column;
+}
+
+.footer__column-heading{
+    margin-bottom: 20px;
+    line-height: 30px;
+    font-size:18px;
+    font-weight: 700;
+}
+/* new code */
+.footer__column-links>a{
+    display: block;
+    line-height: 30px;
+    font-size: 18px;
+    color:white;
+}
+
+
+ .footer__column-links:hover{
+    opacity: .5;
+    transition: 1s linear;
+}
+
+
+.footer__column-ul{
+    padding: 0;
+}
+
+li{display: block;}
+
+/* end new code*/
+
+
+.footer__column-links:nth-child(4){
+    margin-bottom: 16px;
+}
+
+.footer__columns_content_social{
+    
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.footer__social-icons{
+    
+    color:white;
+    line-height: 30px;
+    font-size: 18px;
+    margin-right: 10px;
+}
+.footer__social-icons:nth-child(4){
+    margin-bottom: 16px;
+}
+
+.special-icons{
+    
+    width: 16px;
+    height: 16px;
+}
+
+.logo_place_footer{
+    width: 183px;
+    height: 35px;
+    padding-top: 20px;
+    margin-top: 0px;
+    background-image: url('../images/logo_white.svg');
+    background-repeat: no-repeat;
+}
